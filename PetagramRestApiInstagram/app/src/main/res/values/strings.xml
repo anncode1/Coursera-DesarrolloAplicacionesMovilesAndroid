@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AplicacionContactos</string>
+    <string name="nombre">Anahi Salgado</string>
+    <string name="telefono">55557777</string>
+    <string name="email">anahi@gmail.com</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+    <string name="plikes">0</string>
+    <string name="titulo_paisaje_manana">Paisaje Campo Mañana</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
