@@ -1,39 +1,67 @@
-# node-js-getting-started
+# ANTES: 
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+Por favor utiliza tus propios archivos KEY
+* APP: google-services.json
+En este enlace viene todo al respecto:
+[https://firebase.google.com/docs/android/setup#add_firebase_to_your_app](https://firebase.google.com/docs/android/setup#add_firebase_to_your_app)
+* SERVER: Archivo .json 
+En este enlace viene todo al respecto: 
+[https://firebase.google.com/docs/server/setup#add_firebase_to_your_app](https://firebase.google.com/docs/server/setup#add_firebase_to_your_app)
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-## Running Locally
+## LA APP:
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+Para que puedas probar este proyecto 
+necesitarás de 2 dispositivos corriendo al mismo tiempo.
+Uno emisor y uno receptor de notificaciones.
+
+## 1. Registra el dispositivo en la base de datos Firebase:
+Esto se logra corriendo el proyecto en ambos dispositivos 
+y presionando el botón de "Recibir Notificaciones", para
+que así se guarde su respectivo token_id_device de c/u
+
+## 2. Prueba las notificaciones:
+
+El proyecto debes configurarlo de la siguiente forma
+para ambos casos
+
+- A. EMISOR (Este será quien mandé la notificación al receptor):
+
+* MainActivity.java
+Configurar el tag emisor:
 
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
+private static final String ANIMAL_EMISOR = "perro";
+```
+* método toqueAnimal()
+Configurar la línea con el tag emisor:
+
+```sh
+Call<UsuarioResponse> usuarioResponseCall = endponits.toqueAnimal(usuarioResponse.getId(), ANIMAL_EMISOR);
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Una vez configurado esto, corre la aplicación en el dispositivo
+que fungirá como EMISOR.
 
-## Deploying to Heroku
+- B. Receptor (Este será quien reciba la notificación)
 
+* método toqueAnimal()
+Configurar el objeto receptor con su id y datos:
+``` sh
+final UsuarioResponse usuarioResponse = new UsuarioResponse("-KKAqu3M5p6GFgnqL9fu", "123", ANIMAL_RECEPTOR);
 ```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+Una vez configurado esto, corre la aplicación en el dispositivo
+que fungirá como RECEPTOR.
+__________________________________
+ID perro: -KKAqHNirVTDC-H9qVv0
 
-## Documentation
+ID gato: -KKAqu3M5p6GFgnqL9fu
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
 
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+## EL SERVER:
+Este servidor fue construido con Heroku en Node.js siguiendo estos pasos:
+[https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
+
+
+
