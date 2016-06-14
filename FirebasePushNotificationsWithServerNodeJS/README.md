@@ -27,13 +27,16 @@ para ambos casos
 
 - A. EMISOR (Este será quien mandé la notificación al receptor):
 
-* MainActivity.java
+MainActivity.java
+
 Configurar el tag emisor:
 
 ```sh
 private static final String ANIMAL_EMISOR = "perro";
 ```
-* método toqueAnimal()
+
+método toqueAnimal()
+
 Configurar la línea con el tag emisor:
 
 ```sh
@@ -45,8 +48,10 @@ que fungirá como EMISOR.
 
 - B. Receptor (Este será quien reciba la notificación)
 
-* método toqueAnimal()
+método toqueAnimal()
+
 Configurar el objeto receptor con su id y datos:
+
 ``` sh
 final UsuarioResponse usuarioResponse = new UsuarioResponse("-KKAqu3M5p6GFgnqL9fu", "123", ANIMAL_RECEPTOR);
 ```
