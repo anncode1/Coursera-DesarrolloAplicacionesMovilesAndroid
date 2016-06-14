@@ -68,5 +68,15 @@ ID gato: -KKAqu3M5p6GFgnqL9fu
 Este servidor fue construido con Heroku en Node.js siguiendo estos pasos:
 [https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
+____________________________________
+
+# Demo
+
+![Demo_1](https://github.com/anncode1/Coursera-DesarrolloAplicacionesMovilesAndroid/blob/master/FirebasePushNotificationsWithServerNodeJS/Demo_1.png)
+
+![Demo_2](https://github.com/anncode1/Coursera-DesarrolloAplicacionesMovilesAndroid/blob/master/FirebasePushNotificationsWithServerNodeJS/Demo_2.png)
+
+![Demo_3](https://github.com/anncode1/Coursera-DesarrolloAplicacionesMovilesAndroid/blob/master/FirebasePushNotificationsWithServerNodeJS/Demo_3.png)
+
 
 
