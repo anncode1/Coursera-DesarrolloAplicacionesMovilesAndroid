@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NotificacionFirebase</string>
+    <string name="lanzar_notificacion">Lanzar Notificación</string>
+    <string name="recibir_notificaciones">Recibir Notificaciones</string>
+    <string name="animal_emisor_perro">Soy un Perro, da un toque al gato</string>
+    <string name="animal_emisor_gato">Soy un gato, da un toque al perro</string>
+
+</resources>
