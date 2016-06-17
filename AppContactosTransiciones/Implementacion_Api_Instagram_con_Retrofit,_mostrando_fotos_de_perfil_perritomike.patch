@@ -1,0 +1,221 @@
+Index: ../MiLamparaApp/app/src/main/java/com/anncode/milampara/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../MiLamparaApp/app/src/main/java/com/anncode/milampara/MainActivity.java	(date 1459033192000)
++++ ../MiLamparaApp/app/src/main/java/com/anncode/milampara/MainActivity.java	(revision )
+@@ -22,9 +22,9 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+ 
+-        FloatingActionButton flashFAB =
++        /*FloatingActionButton flashFAB =
+                 (FloatingActionButton) findViewById(R.id.flashFAB);
+-
++*/
+         hasFlash = getPackageManager()
+                 .hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+ 
+@@ -36,7 +36,7 @@
+ 
+             getCamera();
+ 
+-            flashFAB.setOnClickListener(new View.OnClickListener() {
++            /*flashFAB.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     if (!isChecked){
+@@ -47,7 +47,7 @@
+                         isChecked = false;
+                     }
+                 }
+-            });
++            });*/
+         }
+ 
+ 
+Index: ../CardViewRecyclerView_TelmexHub_session2/app/src/main/java/com/anncode/micardview/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../CardViewRecyclerView_TelmexHub_session2/app/src/main/java/com/anncode/micardview/MainActivity.java	(date 1459033192000)
++++ ../CardViewRecyclerView_TelmexHub_session2/app/src/main/java/com/anncode/micardview/MainActivity.java	(revision )
+@@ -60,25 +60,5 @@
+     }
+ 
+ 
+-    @Override
+-    public boolean onCreateOptionsMenu(Menu menu) {
+-        // Inflate the menu; this adds items to the action bar if it is present.
+-        getMenuInflater().inflate(R.menu.menu_main, menu);
+-        return true;
+-    }
+ 
+-    @Override
+-    public boolean onOptionsItemSelected(MenuItem item) {
+-        // Handle action bar item clicks here. The action bar will
+-        // automatically handle clicks on the Home/Up button, so long
+-        // as you specify a parent activity in AndroidManifest.xml.
+-        int id = item.getItemId();
+-
+-        //noinspection SimplifiableIfStatement
+-        if (id == R.id.action_settings) {
+-            return true;
+-        }
+-
+-        return super.onOptionsItemSelected(item);
+-    }
+ }
+Index: ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/content_main2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/content_main2.xml	(date 1459033192000)
++++ ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/content_main2.xml	(revision )
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:orientation="vertical" android:layout_width="match_parent"
+-    android:layout_height="match_parent">
++    android:layout_height="match_parent"
++    android:padding="@dimen/activity_horizontal_margin"
++    >
+ 
+ 
+     <android.support.v7.widget.RecyclerView
+\ No newline at end of file
+Index: ../MiLamparaApp/app/src/main/res/layout/toolbar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../MiLamparaApp/app/src/main/res/layout/toolbar.xml	(date 1459033192000)
++++ ../MiLamparaApp/app/src/main/res/layout/toolbar.xml	(revision )
+@@ -4,5 +4,8 @@
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@color/colorPrimary"
+-    android:elevation="@dimen/elevacion_toolbar"
+-    />
+\ No newline at end of file
++
++    >
++
++
++</android.support.v7.widget.Toolbar>
+\ No newline at end of file
+Index: ../MiLamparaApp/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../MiLamparaApp/.idea/misc.xml	(date 1459033192000)
++++ ../MiLamparaApp/.idea/misc.xml	(revision )
+@@ -37,7 +37,7 @@
+     <ConfirmationsSetting value="0" id="Add" />
+     <ConfirmationsSetting value="0" id="Remove" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+\ No newline at end of file
+Index: ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/cardview_paisaje.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/cardview_paisaje.xml	(date 1459033192000)
++++ ../CardViewRecyclerView_TelmexHub_session2/app/src/main/res/layout/cardview_paisaje.xml	(revision )
+@@ -5,6 +5,7 @@
+     android:layout_height="@dimen/altura_tarjeta1"
+     android:layout_centerHorizontal="true"
+     card_view:cardCornerRadius="4dp"
++    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:card_view="http://schemas.android.com/apk/res-auto">
+ 
+\ No newline at end of file
+Index: ../CardViewRecyclerView_TelmexHub_session2/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../CardViewRecyclerView_TelmexHub_session2/.idea/modules.xml	(date 1459033192000)
++++ ../CardViewRecyclerView_TelmexHub_session2/.idea/modules.xml	(revision )
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
++      <module fileurl="file://$PROJECT_DIR$/CardViewRecyclerView_TelmexHub_session2.iml" filepath="$PROJECT_DIR$/CardViewRecyclerView_TelmexHub_session2.iml" />
+       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+     </modules>
+   </component>
+\ No newline at end of file
+Index: ../MiLamparaApp/app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../MiLamparaApp/app/src/main/res/layout/activity_main.xml	(date 1459033192000)
++++ ../MiLamparaApp/app/src/main/res/layout/activity_main.xml	(revision )
+@@ -5,7 +5,9 @@
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    tools:context=".MainActivity">
++    tools:context=".MainActivity"
++    android:background="@color/colorPrimary"
++    >
+ 
+     <include
+         android:id="@+id/toolbar"
+@@ -13,13 +15,14 @@
+         />
+ 
+     <ImageView
++        android:id="@+id/flashFAB"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:src="@mipmap/foco"
+-        android:layout_gravity="center"
++        android:src="@drawable/foco"
++        android:layout_gravity="bottom|center"
+         />
+ 
+-    <android.support.design.widget.FloatingActionButton
++    <!--<android.support.design.widget.FloatingActionButton
+         android:id="@+id/flashFAB"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+@@ -31,7 +34,7 @@
+         app:pressedTranslationZ="@dimen/translacion_z_fab"
+         app:fabSize="normal"
+ 
+-        />
++        />-->
+ 
+ 
+ 
+Index: ../CardViewRecyclerView_TelmexHub_session2/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../CardViewRecyclerView_TelmexHub_session2/.idea/misc.xml	(date 1459033192000)
++++ ../CardViewRecyclerView_TelmexHub_session2/.idea/misc.xml	(revision )
+@@ -37,7 +37,7 @@
+     <ConfirmationsSetting value="0" id="Add" />
+     <ConfirmationsSetting value="0" id="Remove" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+\ No newline at end of file
